@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>work</title>
+</head>
+<body>
+    <script>
+   
+                                      //这是第一题。
+    const user = {
+    name: "John",
+    years: 30 ,
+};
+    const {name,years,isAdmin} = user;
+        age = years
+    console.log(name);
+    console.log(age);
+    console.log(isAdmin);
+                                     //这是第二题。
+    //第一种方法。(a)
+    const sumTo1 = (n) => {       
+        var s = 0;
+        var  i;
+        for(i=1;i<=n;i++){
+          s = s + i;
+          
+        }
+      console.log(s)
+     }
+    console.log(sumTo1(100));
+    //第二种方法。(b)
+     const sumTo2 = (n) =>{
+        if (n == 1){
+            return 1;
+        }
+        else{
+            return n + sumTo2(n-1);
+        }
+     }
+    console.log(sumTo2(100));
+     //第三种方法(c)
+     const sumTo3 = (n) =>{
+         var x =(n+1)*n/2;
+         console.log(x);
+     }
+    console.log(sumTo3(100));
+
+                                //这是第三题。
+   function Accumulator(startingValue){
+       var type  ;
+           this.read = function(type){
+             type;
+           }
+           var value1 = startingValue;
+            value = console.log(value1+this.read());
+        
+        }
+           
+          
+        
+   const accumulator = new Accumulator(1) ;
+         accumulator.read(2) ; 
+         accumulator.read(3) ;
+   console.log(accumulator.value)   
+   
+                                  //第四题.
+     function clone(firstObj, finalObj) {
+    var obj = finalObj || {};
+    for (var i in firstObj) {
+        var text = firstObj[i];
+        if(text === obj) {
+            continue;
+        }
+  
+        else  if (typeof text === 'object') {
+            obj[i] = (text.constructor === Array) ? [] : Object.create(text);
+        } else {
+            obj[i] = text;
+        }
+    }
+    return obj;
+}
+/* 首先先构建一个循环体系将firstObj的一个对象赋值给text中， 再对text进行判断，如果text内依
+旧有对象，则进一步对text内的对象进行判断，如果没有对象，则再判断text的类型是否是键-值，如果
+不是如果创建text的函数为数组，则obj内对应的这一项赋值为[]，如果不是数组，则将该text赋值给
+obj内的这一项，如果是键-值，则直接将text赋值给obj内的这一项。依次进行*/
+ 
+
+
+    
+    </script>
+</body>
+</html>
