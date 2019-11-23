@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1</title>
+    <style>
+body{
+    margin: 0;
+    border: 0;
+}
+
+</style>
+<script>
+ function changecolor(){
+   const select= document.getElementById("select").value;
+    switch(select){
+        case"red":
+       document.getElementById("color").style.backgroundColor ="red";
+       break;
+       case"blue":
+       document.getElementById("color").style.backgroundColor ="blue";
+       break;     
+       case"green":
+       document.getElementById("color").style.backgroundColor ="green";
+       break;
+    }         
+}
+function changefont_size(){
+    const size=document.getElementById("size").value;
+    switch(size){
+        case"5px":
+       document.getElementById("font").style.fontSize ="5px";
+       break;
+       case"15px":
+       document.getElementById("font").style.fontSize ="15px";
+       break;     
+       case"25px":
+       document.getElementById("font").style.fontSize ="25px";
+       break;
+    }
+
+}
+</script>
+
+</head>
+<body id = "color" >
+    <select id="select">
+       <option>red</option>
+       <option>blue</option>
+       <option>green</option>
+   </select>
+   <input type="button" value="点击更改颜色" onclick="changecolor()">
+
+
+        <p id="font">Boy♂Next♂Door</p>
+        <select id="size">
+       <option>5px</option>
+       <option>15px</option>
+       <option>25px</option>
+   </select>
+        <input type="button" value="点击更改字号" onclick="changefont_size()">
+    </div>
+    
+</body>
+</html>
