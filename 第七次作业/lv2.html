@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lv2</title>
+</head>
+<script>
+    //以下是节流
+function throttle(fn,delay = 1000){
+    const timer;
+    const firstTime = ture;
+    return function(){
+        const arg = arguments;
+        const th = this;
+        if(firstTime){
+            fn.apply(th,arg);
+            return firstTime = false;
+        }
+        else{}
+            if(timer){
+                return false;
+            }
+            timer = setTimeout(function(){
+                clearTimeout(timer);
+                time = null;
+                fn.apply(th,arg)},delay)
+            }
+        }
+   
+//以下是防抖
+function debounce(fn,delay = 1000){
+    const timer;
+    return function(){
+        const th = this;
+        const arg = arguments;
+        if(timer){
+            clearTimeout(timer);
+            return timer = null;
+        }else{}
+        timer = setTimeout(function(){
+            timer = null;
+            fn.apply(th,arg)},delay)
+    }
+}
+
+
+
+</script>
+
+
+<body>
+    
+</body>
+</html>

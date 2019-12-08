@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lv1</title>
+</head>
+<script>
+function sayInfo(age){
+  console.log("name:"+this.name)
+  console.log("age:"+age)
+}
+const user = {
+  name:"van"
+}
+ Function.prototype.call2 = function(a){  
+  const arg =[];
+   a.fn = this;
+  for(var i=1;i<arguments.length;i++){
+    arg.push(arguments[i])
+  }
+   eval(a.fn(arg));
+   delete a.fn;
+ }
+ sayInfo.call2(user,100);
+</script>
+<body>
+  
+</body>
+</html>
