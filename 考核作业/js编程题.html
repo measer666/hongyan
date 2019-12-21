@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    /第一题/
+var str = "    hello world  ";
+function firstone(a){
+  var b = a.split("") 
+  for(i=0;i<b.length;i++){
+      if(b[i] ==" "){
+          b.shift()
+          if(b[i+1] !==" "){
+              break;
+          }
+      }
+  }
+  for(i=b.length-1;i>=0;i--){
+      if(b[i] ==" "){
+          b.pop();
+          if(b[i-1] !==" "){
+              break;
+          }
+      }
+  }
+  b = b.join("");
+  console.log(b)
+}
+firstone(str);
+/第二题/
+ var array1 = [1,2,3,4,2,4];
+ function secondone(arr){
+     var arr1=[];
+      for(var i=0;i<arr.length;i++){
+          if(arr1.indexOf(arr[i]) == -1){
+              arr1.push(arr[i]);
+          }
+      }
+   return arr1;
+ }
+ console.log( secondone(array1));
+/第三题/
+
+ function reverse(x) {
+    x=x.toString()
+    var str=x.split("").reverse().join("")
+    str = parseInt(str)
+    if(str>2**31-1) {
+        return 0;
+        }
+    return x < 0 ? -str:str;}
+    /*第四题
+ 这个实在也不会，没看懂*/
+function countDown(){
+  var nowtime = new Date();
+  var endtime = new Date("2020/01/01,00:00:00");
+  var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+}
+  var d = parseInt(lefttime / (24*60*60))
+  var h = parseInt(lefttime / (60 * 60) % 24);
+  var m = parseInt(lefttime / 60 % 60);
+  var s = parseInt(lefttime % 60);
+  document.querySelector("#time").innerHTML = `现在距离2020年： ${d}天 ${h} 时 ${m} 分 ${s} 秒`;
+  setTimeout(countDown,1000);
+  /*第六题
+  又没看懂。。。。。*/
+</script>
+<body>
+    <h1 id="time"></h1>
+</body>
+</html>
